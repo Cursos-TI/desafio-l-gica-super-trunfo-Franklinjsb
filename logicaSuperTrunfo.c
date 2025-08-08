@@ -10,7 +10,7 @@ int main() {
     // Você pode utilizar o código do primeiro desafio
     //atributos carta 1
     char estado[20] = "AMAZONAS";
-    char codigo_carta[3] = "A01";
+    char codigo_carta[4] = "A01";
     char cidade[20]="MANAUS";
     int populacao=10000;
     int pontos_turisticos=5;
@@ -21,7 +21,7 @@ int main() {
 
     //atributos carta 2
     char estado_2[20]="ACRE";
-    char codigo_carta_2[3]="A02";
+    char codigo_carta_2[4]="A02";
     char cidade_2[20]="RIO BRANCO";
     int populacao_2=5000;
     int pontos_turisticos_2=3;
