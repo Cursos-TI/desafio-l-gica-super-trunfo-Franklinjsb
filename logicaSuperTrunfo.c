@@ -18,17 +18,23 @@ int main() {
     float pib =12000;
     float densidade;
     float pib_per_capita;
+    float super_poder;
 
     //atributos carta 2
     char estado_2[20]="ACRE";
     char codigo_carta_2[4]="A02";
     char cidade_2[20]="RIO BRANCO";
-    int populacao_2=5000;
+    int populacao_2=15000;
     int pontos_turisticos_2=3;
     float area_2=3000;
     float pib_2=7000;
     float densidade_2;
     float pib_per_capita_2;
+    float super_poder2;
+
+    //variável para comparação
+    int resultado;
+
 
     //cálculo densidade e pib per capita:
     densidade = populacao/area;
@@ -86,6 +92,100 @@ int main() {
     printf("Densidade Populacional: %.2f hab/km²\n", densidade_2);
     printf("PIB per Capita: %.2f reais\n", pib_per_capita_2);
     
+
+    //Nível Mestre
+
+    //soma dos super poderes
+    super_poder  = populacao + area + pib + pontos_turisticos + pib_per_capita + (1/densidade);
+
+    super_poder2 = populacao_2 + area_2 + pib_2 + pontos_turisticos_2 + pib_per_capita_2 + (1/densidade_2);
+
+    //comparação dos atributos das cartas
+    printf("\n***Comparação de Cartas:***\n");
+    
+    resultado = populacao>populacao_2;
+
+    if (resultado ==1)
+    {
+        printf("População: Carta 1 venceu (%d)\n", resultado); 
+    }
+    else
+    {
+        printf("População: Carta 2 venceu (%d)\n", resultado); 
+    
+    }
+    
+    resultado = area>area_2;
+
+    if (resultado ==1)
+    {
+        printf("Área: Carta 1 venceu (%d)\n", resultado); 
+    }
+    else
+    {
+        printf("Área: Carta 2 venceu (%d)\n", resultado); 
+    
+    }
+
+    resultado = pib>pib_2;
+
+    if (resultado ==1)
+    {
+        printf("Pib: Carta 1 venceu (%d)\n", resultado); 
+    }
+    else
+    {
+        printf("Pib: Carta 2 venceu (%d)\n", resultado); 
+    
+    }
+
+    resultado = pontos_turisticos>pontos_turisticos_2;
+
+    if (resultado ==1)
+    {
+        printf("Pontos Turísticos: Carta 1 venceu (%d)\n", resultado); 
+    }
+    else
+    {
+        printf("Pontos Turísticos: Carta 2 venceu (%d)\n", resultado); 
+    
+    }
+
+    resultado = densidade<densidade_2;
+
+    if (resultado ==1)
+    {
+        printf("Densidade: Carta 1 venceu (%d)\n", resultado); 
+    }
+    else
+    {
+        printf("Densidade: Carta 2 venceu (%d)\n", resultado); 
+    
+    }
+
+    resultado = pib_per_capita>pib_per_capita_2;
+
+    if (resultado ==1)
+    {
+        printf("Pib per Capita: Carta 1 venceu (%d)\n", resultado); 
+    }
+    else
+    {
+        printf("Pib per Capita: Carta 2 venceu (%d)\n", resultado); 
+    
+    }
+
+    resultado = super_poder>super_poder2;
+
+    if (resultado ==1)
+    {
+        printf("Super Poder: Carta 1 venceu (%d)\n", resultado); 
+    }
+    else
+    {
+        printf("Super Poder: Carta 2 venceu (%d)\n", resultado); 
+    
+    }
     // Cadastro das Cartas:
     // Implemente a lógica para solicitar ao usuário que insira os dados das cidades
     // utilizando a função scanf para capturar as entradas.
